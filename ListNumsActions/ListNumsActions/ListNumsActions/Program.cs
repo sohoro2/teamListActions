@@ -26,9 +26,17 @@ namespace ListNumsActions
                         //TODO
                         break;
                     case "contains":
-                        //TODO
-                        break;
-                    case "remove":
+                        int numberToCheck = int.Parse(cmd[1]);
+                        if (nums.Contains(numberToCheck))
+                        {
+                            Console.WriteLine("Yes");
+                        }
+                        else
+                        {
+                            Console.WriteLine("No");
+                        }
+                            break;
+                    case "remove": 
                         //TODO
                         break;
                     case "print":
@@ -38,6 +46,20 @@ namespace ListNumsActions
                     case "sum":
                         Console.WriteLine(nums.Sum());
                         break;
+                        int index = int.Parse(cmd[1]);
+                        if (index >=0 && index<nums.Count)
+
+                        {
+                            int removedNumber = nums[index];
+                            nums.RemoveAt(index);
+                            Console.WriteLine($"Removed number {removedNumber} at index {index}");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Invalid Index");
+                        }
+                            break;
+                    //TODO
 
                     default:
                         Console.WriteLine("Unknown command");
