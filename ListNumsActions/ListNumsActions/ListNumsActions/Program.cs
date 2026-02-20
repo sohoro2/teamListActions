@@ -31,10 +31,20 @@ namespace ListNumsActions
                     case "remove":
                         //TODO
                         break;
-                    //TODO
+                    case "print":
+                        Console.WriteLine(string.Join(" ", nums));
+                        break;
+
+                    case "sum":
+                        Console.WriteLine(nums.Sum());
+                        break;
 
                     default:
+                        Console.WriteLine("Unknown command");
                         break;
+
+                    
+                       
                 }
             }
         }
